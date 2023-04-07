@@ -1,10 +1,14 @@
 import './App.css';
-import React from 'react'
+import React, {useState} from 'react'
 import { Home } from '../Home/Home';
 import { Nav } from '../Nav/Nav';
 import { fetchData } from '../../data/apiCall';
 
-function App() {
+const App = () => {
+  const [breed, setBreed] = useState([])
+  const [favorites, setFavorites] = useState([])
+  const [error, setError] = useState('')
+
   return (
     <div>
       <Nav />
