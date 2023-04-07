@@ -7,6 +7,6 @@ export const fetchData = endpoint => {
         throw new Error(res)
       }
     })
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
+    // .then(data => console.log(data))
+    // .catch(error => console.log(error))
 }
