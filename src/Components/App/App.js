@@ -6,6 +6,7 @@ import { Nav } from '../Nav/Nav';
 import './App.css';
 import { ExhibitContainer } from '../ExhibitContainer/ExhibitContainer';
 import { BreedPage } from '../BreedPage/BreedPage';
+import { Redirect, Route, Switch } from "react-router-dom";
 
 const App = () => {
   const [breed, setBreed] = useState('')
@@ -42,9 +43,12 @@ const App = () => {
     <>
       <DogContext.Provider>
         <Nav />
-        <Home />
-        <ExhibitContainer selectBreed={selectBreed}/>
-        <BreedPage breedUrls={breedUrls}/>
+        <Switch>
+          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} breedUrls={breedUrls}/> } />
+          <Route path="/dogexhibits" render={() => <ExhibitContainer selectBreed={selectBreed}/> } />
+          <Route exact path="/" render={() => <Home />} />
+          <Redirect from="*" to="/"/> 
+        </Switch>
       </DogContext.Provider>
     </>
   )
