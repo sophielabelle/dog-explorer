@@ -10,22 +10,23 @@ const App = () => {
   const [favorites, setFavorites] = useState([])
   const [error, setError] = useState('')
 
-  const fetchDogData = () => {
-   fetchData('breed/schnauzer/images')
-    .then(data => console.log(data))
-    .catch(error => console.log(error))
-  }
+  // const fetchDogData = () => {
+  //  fetchData('breed/schnauzer/images')
+  //   .then(data => console.log(data))
+  //   .catch(error => console.log(error))
+  // }
 
-  useEffect(() => fetchDogData(), [])
+  // useEffect(() => fetchDogData(), [])
 
 
 
   return (
     <>
-      <DogContext.Provider value={{ text, setText }}>
+    {/* {console.log(DogContext)} */}
+      {/* <DogContext.Provider> */}
         <Nav />
         <Home />
-      </DogContext.Provider>
+      {/* </DogContext.Provider> */}
     </>
   )
 }
