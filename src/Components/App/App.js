@@ -1,15 +1,32 @@
-import './App.css';
-import React from 'react'
+import React, {useEffect, useState} from 'react';
+import { DogContext } from '../../DogContext/DogContext';
+import { fetchData } from '../../data/apiCall';
 import { Home } from '../Home/Home';
 import { Nav } from '../Nav/Nav';
-import { fetchData } from '../../data/apiCall';
+import './App.css';
 
-function App() {
+const App = () => {
+  const [breed, setBreed] = useState([])
+  const [favorites, setFavorites] = useState([])
+  const [error, setError] = useState('')
+
+  const fetchDogData = () => {
+   fetchData('breed/schnauzer/images')
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
+  }
+
+  useEffect(() => fetchDogData(), [])
+
+
+
   return (
-    <div>
-      <Nav />
-      <Home />
-    </div>
+    <>
+      <DogContext.Provider value={{ text, setText }}>
+        <Nav />
+        <Home />
+      </DogContext.Provider>
+    </>
   )
 }
 
