@@ -44,7 +44,7 @@ const App = () => {
         <Nav />
         <Home />
         <ExhibitContainer selectBreed={selectBreed}/>
-        {/* <BreedPage breedUrls={breedUrls}/> */}
+        <BreedPage breedUrls={breedUrls}/>
       </DogContext.Provider>
     </>
   )
