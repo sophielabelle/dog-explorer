@@ -1,8 +1,9 @@
-import './App.css';
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react';
+import { DogContext } from '../../DogContext/DogContext';
+import { fetchData } from '../../data/apiCall';
 import { Home } from '../Home/Home';
 import { Nav } from '../Nav/Nav';
-import { fetchData } from '../../data/apiCall';
+import './App.css';
 
 const App = () => {
   const [breed, setBreed] = useState([])
@@ -10,7 +11,7 @@ const App = () => {
   const [error, setError] = useState('')
 
   const fetchDogData = () => {
-   fetchData("breed/schnauzer/images")
+   fetchData('breed/schnauzer/images')
     .then(data => console.log(data))
     .catch(error => console.log(error))
   }
@@ -20,10 +21,12 @@ const App = () => {
 
 
   return (
-    <div>
-      <Nav />
-      <Home />
-    </div>
+    <>
+      <DogContext.Provider value={{ text, setText }}>
+        <Nav />
+        <Home />
+      </DogContext.Provider>
+    </>
   )
 }
 
