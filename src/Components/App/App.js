@@ -13,35 +13,37 @@ const App = () => {
   const [favorites, setFavorites] = useState([])
   const [error, setError] = useState('')
 
-  const fetchDogData = (breed) => {
-   fetchData(`breed/${breed}/images`)
+  const fetchDogData = () => {
+    console.log('fetch dog')
+  
+    console.log('hi',breed)
+    fetchData(`breed/${{breed}}/images`)
     .then(data => {
       console.log(data)
       setBreedUrls(data.message)
     })
     .catch(error => console.log(error))
+    
   }
 
   const selectBreed = (event) => {
-    console.log(event.target);
-    const selected = event.target;
+    console.log(event.target.parentElement.id);
+    const selected = event.target.parentElement.id;
     setBreed(selected);
+    console.log('', breed)
   }
 
-  // useEffect(() => fetchDogData(), [])
+  useEffect(() => {
+    if(breed !== ''){
+      fetchDogData()
+}}, [])
 
   return (
     <>
-      <DogContext.Provider value={{
-          breed,
-          actions: {
-            breedUrls: breedUrls,
-            selectBreed: selectBreed
-          }
-        }}>
+      <DogContext.Provider>
         <Nav />
         <Home />
-        <ExhibitContainer selectBreed={selectBreed}/>
+        <ExhibitContainer setBreed={setBreed}/>
         {/* <BreedPage breedUrls={breedUrls}/> */}
       </DogContext.Provider>
     </>
