@@ -3,9 +3,11 @@ import "./ExhibitContainer.css"
 import { ExhibitCard } from "../ExhibitCard/ExhibitCard"
 
 export const ExhibitContainer = () => {
-  const breeds = ["retrievers", "bulldogs", "greyhounds", "australians", "schnauzers"]
-  const breedCards = breeds.map(breed => <ExhibitCard breed={breed} />)
+  const breeds = ["BlackLab.jpeg", "Bulldog.jpeg", "Greyhound.jpeg", "Retriever.jpeg", "Schnauzer.jpeg"]
+  const breedCards = breeds.map(breed => <ExhibitCard key={breed} breed={breed} />)
   return (
-    <div className="exhibit-container">{breedCards}</div>
+    <div className="exhibit-container">
+      {breedCards}
+    </div>
   )
 }

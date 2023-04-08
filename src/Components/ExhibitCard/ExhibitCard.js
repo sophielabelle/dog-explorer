@@ -4,7 +4,7 @@ import "./ExhibitCard.css"
 export const ExhibitCard = ({breed}) => {
   return (
     <div className="exhibit-card">
-      <p>{breed}</p>
+      <img src={require(`../../assets/${breed}`)}/>
     </div>
   )
 }

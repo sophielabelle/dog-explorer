@@ -4,6 +4,7 @@ import { fetchData } from '../../data/apiCall';
 import { Home } from '../Home/Home';
 import { Nav } from '../Nav/Nav';
 import './App.css';
+import { ExhibitContainer } from '../ExhibitContainer/ExhibitContainer';
 
 const App = () => {
   const [breed, setBreed] = useState([])
@@ -26,6 +27,7 @@ const App = () => {
       {/* <DogContext.Provider> */}
         <Nav />
         <Home />
+        <ExhibitContainer />
       {/* </DogContext.Provider> */}
     </>
   )
