@@ -17,7 +17,7 @@ const App = () => {
     console.log('fetch dog')
   
     console.log('hi',breed)
-    fetchData(`breed/${{breed}}/images`)
+    fetchData(`breed/${breed}/images`)
     .then(data => {
       console.log(data)
       setBreedUrls(data.message)
@@ -30,20 +30,20 @@ const App = () => {
     console.log(event.target.parentElement.id);
     const selected = event.target.parentElement.id;
     setBreed(selected);
-    console.log('', breed)
+    
   }
 
   useEffect(() => {
     if(breed !== ''){
       fetchDogData()
-}}, [])
+}}, [breed])
 
   return (
     <>
       <DogContext.Provider>
         <Nav />
         <Home />
-        <ExhibitContainer setBreed={setBreed}/>
+        <ExhibitContainer selectBreed={selectBreed}/>
         {/* <BreedPage breedUrls={breedUrls}/> */}
       </DogContext.Provider>
     </>
