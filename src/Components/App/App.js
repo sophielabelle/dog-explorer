@@ -24,11 +24,11 @@ const App = () => {
   return (
     <>
     {/* {console.log(DogContext)} */}
-      {/* <DogContext.Provider> */}
+      <DogContext.Provider>
         <Nav />
         <Home />
         <ExhibitContainer />
-      {/* </DogContext.Provider> */}
+      </DogContext.Provider>
     </>
   )
 }
