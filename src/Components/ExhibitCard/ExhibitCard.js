@@ -1,5 +1,7 @@
-import React from "react"
-import "./ExhibitCard.css"
+import React from "react";
+import { DogContext } from "../../DogContext/DogContext";
+import "./ExhibitCard.css";
+
 
 export const ExhibitCard = ({breed}) => {
   const altText = breed.toLowerCase()

@@ -1,11 +1,14 @@
 import React from "react";
+import { Card } from "../Card/Card";
 import "./BreedPage.css";
 
-export const BreedPage = ({breedURLs}) => {
-  const breedCards = breedURLs.map(dogURL => <Card url={dogURL}/>)
+export const BreedPage = ({breedUrls}) => {
+
+
+  // const breedCards = breedUrls.map(dogUrl => <Card url={dogUrl}/>)
   return (
     <div className="breed-page">
-      {breedCards}
+      {/* {breedCards} */}
     </div>
   )
 }
