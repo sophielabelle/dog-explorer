@@ -5,20 +5,20 @@ import './Home.css'
 
 
 export const Home = () => {
-  const [randomDog, setRandomDog] = useState('')
-  const [error, setError] = useState('')
+  const [randomDog, setRandomDog] = useState('');
+  const [error, setError] = useState('');
 
   const fetchRandomDog = () => {
     fetchData('breeds/image/random')
       .then(data => {
-      console.log(data.message)
-      setRandomDog(data.message)
-      
+        setRandomDog(data.message);
       })
-      .catch(error => console.log(error))
+      .catch(err => {
+        setError(err);
+      });
   }
-   console.log('random', randomDog)
-   useEffect(() => {fetchRandomDog()}, [])
+
+  useEffect(() => {fetchRandomDog()}, []);
 
   return(
     <section className="home-page">
