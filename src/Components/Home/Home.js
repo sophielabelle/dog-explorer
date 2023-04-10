@@ -24,8 +24,8 @@ export const Home = () => {
     <section className="home-page">
       <h2>Welcome Dawgs</h2>
       <p>about us goes here</p>
+      <button onClick={() => fetchRandomDog()} >Get Random Dog!</button>
       <img className="random-dog" src={randomDog}/>
-      <button>Let's go on a walk!</button>
     </section>
   );
 }

@@ -15,12 +15,8 @@ const App = () => {
   const [error, setError] = useState('')
 
   const fetchDogData = () => {
-    console.log('fetch dog')
-  
-    console.log('hi',breed)
     fetchData(`breed/${breed}/images`)
     .then(data => {
-      console.log(data)
       setBreedUrls(data.message)
     })
     .catch(error => console.log(error))
@@ -28,16 +24,13 @@ const App = () => {
   }
 
   const selectBreed = (event) => {
-    console.log(event.target.parentElement.id);
     const selected = event.target.parentElement.id;
     setBreed(selected);
-    
   }
 
   useEffect(() => {
-    if(breed !== ''){
       fetchDogData()
-}}, [breed])
+  }, [breed])
 
   return (
     <>
