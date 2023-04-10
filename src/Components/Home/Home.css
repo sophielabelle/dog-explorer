@@ -1,3 +1,27 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 18%;
+  background-color: pink;
+  height: 88vh;
+}
+
+.home-page > h2,
+.home-page > p,
+.home-page > button {
+  width: fit-content;
+}
+
 .random-dog{
-  width: 50vw;
+  /* width: 50vw; */
+  max-height: 45vh;
+}
+
+.home-page > button {
+  height: 40px;
+  width: 150px;
+  border: 0;
+  border-radius: 7px;
 }
