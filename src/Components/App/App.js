@@ -6,6 +6,7 @@ import { Nav } from '../Nav/Nav';
 import './App.css';
 import { ExhibitContainer } from '../ExhibitContainer/ExhibitContainer';
 import { BreedPage } from '../BreedPage/BreedPage';
+import { Favorites } from '../Favorites/Favorites';
 import { Redirect, Route, Switch } from "react-router-dom";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
   const [breedUrls, setBreedUrls] = useState([])
   const [favorites, setFavorites] = useState([])
   const [error, setError] = useState('')
+  const [disabled, setDisabled] = useState(false)
 
   const fetchDogData = () => {
     fetchData(`breed/${breed}/images`)
@@ -29,11 +31,15 @@ const App = () => {
   }
 
   useEffect(() => {
+    if(breed !== ''){
       fetchDogData()
+    }
   }, [breed])
+
 
   const favoriteDog = (newFav) => {
     setFavorites([...favorites, newFav])
+    setDisabled(true) 
   }
 
   return (
@@ -41,8 +47,10 @@ const App = () => {
       <DogContext.Provider>
         <Nav />
         <Switch>
-          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} breedUrls={breedUrls} favoriteDog={favoriteDog}/> } />
+          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} breedUrls={breedUrls} favoriteDog={favoriteDog}
+          /> } />
           <Route path="/dogexhibits" render={() => <ExhibitContainer selectBreed={selectBreed} /> } />
+          <Route path="/favorites" render={() => <Favorites favorites={favorites}/>} />
           <Route exact path="/" render={() => <Home />} />
           <Redirect from="*" to="/"/> 
         </Switch>
