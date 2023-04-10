@@ -32,13 +32,17 @@ const App = () => {
       fetchDogData()
   }, [breed])
 
+  const favoriteDog = (newFav) => {
+    setFavorites([...favorites, newFav])
+  }
+
   return (
     <>
       <DogContext.Provider>
         <Nav />
         <Switch>
-          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} breedUrls={breedUrls}/> } />
-          <Route path="/dogexhibits" render={() => <ExhibitContainer selectBreed={selectBreed}/> } />
+          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} breedUrls={breedUrls} favoriteDog={favoriteDog}/> } />
+          <Route path="/dogexhibits" render={() => <ExhibitContainer selectBreed={selectBreed} /> } />
           <Route exact path="/" render={() => <Home />} />
           <Redirect from="*" to="/"/> 
         </Switch>
