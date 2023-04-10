@@ -6,14 +6,18 @@ import { NavLink } from 'react-router-dom'
 export const Nav = () => {
   return (
     <header className="nav-bar">
-      <h1> Night at the Dawg Museum</h1>
-      <button className='nav-btn'>Favorite Dogs</button>
-      <NavLink to="/">
-        <button className='nav-btn'>Home</button>
+      <NavLink to="/" style={{ textDecoration: 'none', color: 'white' }}>
+        <h1> Night at the Dawg Museum</h1>
       </NavLink>
-      <NavLink to="/dogexhibits">
-        <button className='nav-btn'>Choose Your Dog Breed</button>
-      </NavLink>
+      <div className="nav-btns">
+        <NavLink to="/">
+          <button className='nav-btn'>Home</button>
+        </NavLink>
+        <NavLink to="/dogexhibits">
+          <button className='nav-btn'>Choose Your Dog Breed</button>
+        </NavLink>
+        <button className='nav-btn'>Favorite Dogs</button>
+      </div>
     </header>
   )
 }
