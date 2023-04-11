@@ -3,11 +3,11 @@ import { DogContext } from '../../DogContext/DogContext';
 import { fetchData } from '../../data/apiCall';
 import { Home } from '../Home/Home';
 import { Nav } from '../Nav/Nav';
-import './App.css';
 import { ExhibitContainer } from '../ExhibitContainer/ExhibitContainer';
 import { BreedPage } from '../BreedPage/BreedPage';
 import { Favorites } from '../Favorites/Favorites';
 import { Redirect, Route, Switch } from "react-router-dom";
+import './App.css';
 
 const App = () => {
   const [breed, setBreed] = useState('')
@@ -25,17 +25,11 @@ const App = () => {
     
   }
 
-  // const selectBreed = (event) => {
-  //   const selected = event.target.parentElement.id;
-  //   setBreed(selected);
-  // }
-
   useEffect(() => {
     if(breed !== ''){
       fetchDogData()
     }
   }, [breed])
-
 
   const favoriteDog = (newFav) => {
     setFavorites([...favorites, newFav])
@@ -44,7 +38,7 @@ const App = () => {
 
   return (
     <>
-      <DogContext.Provider value={{urls: breedUrls, favorite: favoriteDog, chooseBreed: [breed, setBreed]}}>
+      <DogContext.Provider value={{urls: breedUrls, favorite: favoriteDog, chooseBreed: setBreed}}>
         <Nav />
         <Switch>
           <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />

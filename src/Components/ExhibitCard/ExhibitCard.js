@@ -9,10 +9,9 @@ import { useContext } from "react";
 export const ExhibitCard = ({card}) => {
 
   const { chooseBreed } = useContext(DogContext);
-  const [breed, setBreed] = chooseBreed
+  const setBreed = chooseBreed
 
   const selectBreed = (event) => {
-    console.log(event.target.parentElement.id)
     const selected = event.target.parentElement.id;
     setBreed(selected);
   }
@@ -29,5 +28,3 @@ export const ExhibitCard = ({card}) => {
     </NavLink>
   )
 }
-
-//
