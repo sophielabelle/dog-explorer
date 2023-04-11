@@ -1,16 +1,14 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
+import { DogContext } from '../../DogContext/DogContext';
 import { Card } from "../Card/Card";
 import "./BreedPage.css";
-import { DogContext } from '../../DogContext/DogContext';
 
 
 export const BreedPage = () => {
+  const { urls } = useContext(DogContext);
+  const breedUrls = urls;
 
-  const {urls, favorite} = useContext(DogContext)
-  const breedUrls = urls
-  const favoriteDog = favorite
-
-  const breedCards = breedUrls.map(dogUrl => <Card url={dogUrl} favoriteDog={favoriteDog}/>)
+  const breedCards = breedUrls.map(url => <Card url={url} />)
   return (
     <div className="breed-page">
       {breedCards}

@@ -7,9 +7,8 @@ import { useContext } from "react";
 
 
 export const ExhibitCard = ({card}) => {
-
   const { chooseBreed } = useContext(DogContext);
-  const setBreed = chooseBreed
+  const setBreed = chooseBreed;
 
   const selectBreed = (event) => {
     const selected = event.target.parentElement.id;

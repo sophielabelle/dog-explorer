@@ -31,14 +31,9 @@ const App = () => {
     }
   }, [breed])
 
-  const favoriteDog = (newFav) => {
-    setFavorites([...favorites, newFav])
-    setDisabled(true) 
-  }
-
   return (
     <>
-      <DogContext.Provider value={{urls: breedUrls, favorite: favoriteDog, chooseBreed: setBreed}}>
+      <DogContext.Provider value={{urls: breedUrls, addFavs: [favorites, setFavorites], chooseBreed: setBreed}}>
         <Nav />
         <Switch>
           <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />
