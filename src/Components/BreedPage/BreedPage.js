@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DogContext } from '../../DogContext/DogContext';
-import { Card } from "../Card/Card";
+import { BreedCard } from "../BreedCard/BreedCard";
 import "./BreedPage.css";
 
 
@@ -8,7 +8,7 @@ export const BreedPage = () => {
   const { urls } = useContext(DogContext);
   const breedUrls = urls;
 
-  const breedCards = breedUrls.map(url => <Card url={url} />)
+  const breedCards = breedUrls.map(url => <BreedCard url={url} />)
   return (
     <div className="breed-page">
       {breedCards}

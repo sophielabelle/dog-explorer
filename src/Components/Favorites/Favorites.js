@@ -1,9 +1,13 @@
-import React from "react"
-import { Card } from "../Card/Card"
+import React, { useContext } from "react";
+import { DogContext } from '../../DogContext/DogContext';
+import { FavoriteCard } from "../FavoriteCard/FavoriteCard";
 import "./Favorites.css"
 
-export const Favorites = ({favorites}) => {
-  const allFavorites = favorites.map(favorite => <Card url={favorite}/>)
+export const Favorites = () => {
+  const { addFavs } = useContext(DogContext);
+  const [favorites, setFavorites] = addFavs;
+
+  const allFavorites = favorites.map(favorite => <FavoriteCard url={favorite}/>)
   return(
     <section className="favorites">
       {allFavorites}
