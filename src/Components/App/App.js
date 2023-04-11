@@ -25,10 +25,10 @@ const App = () => {
     
   }
 
-  const selectBreed = (event) => {
-    const selected = event.target.parentElement.id;
-    setBreed(selected);
-  }
+  // const selectBreed = (event) => {
+  //   const selected = event.target.parentElement.id;
+  //   setBreed(selected);
+  // }
 
   useEffect(() => {
     if(breed !== ''){
@@ -44,11 +44,11 @@ const App = () => {
 
   return (
     <>
-      <DogContext.Provider value={{urls: breedUrls, favorite: favoriteDog}}>
+      <DogContext.Provider value={{urls: breedUrls, favorite: favoriteDog, chooseBreed: [breed, setBreed]}}>
         <Nav />
         <Switch>
           <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />
-          <Route path="/dogexhibits" render={() => <ExhibitContainer selectBreed={selectBreed} /> } />
+          <Route path="/dogexhibits" render={() => <ExhibitContainer /> } />
           <Route path="/favorites" render={() => <Favorites favorites={favorites}/>} />
           <Route exact path="/" render={() => <Home />} />
           <Redirect from="*" to="/"/> 
