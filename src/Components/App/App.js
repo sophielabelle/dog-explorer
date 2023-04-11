@@ -44,11 +44,10 @@ const App = () => {
 
   return (
     <>
-      <DogContext.Provider>
+      <DogContext.Provider value={{urls: breedUrls, favorite: favoriteDog}}>
         <Nav />
         <Switch>
-          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} breedUrls={breedUrls} favoriteDog={favoriteDog}
-          /> } />
+          <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />
           <Route path="/dogexhibits" render={() => <ExhibitContainer selectBreed={selectBreed} /> } />
           <Route path="/favorites" render={() => <Favorites favorites={favorites}/>} />
           <Route exact path="/" render={() => <Home />} />
