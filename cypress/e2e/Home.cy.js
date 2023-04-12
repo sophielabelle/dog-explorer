@@ -28,9 +28,20 @@ describe('Home Page', () => {
     cy.get('.get-random').find('button').contains('Get Random Dog!')
   })
 
-  it('Home page should have a title', () => {
-    cy.get('h1').contains('Night at the Dawg Museum')
+  it('Should get a new random dog when the button is pressed', () => {
+    cy.intercept('GET', 'https://dog.ceo/api/breeds/image/random', {
+      statusCode: 200,  
+      fixture: "getRandomDog.json"
+    })
+    cy.get('.get-random').find('.random-dog').should('have.attr', 'src').should('eq', 'https://images.dog.ceo/breeds/germanshepherd/n02106662_12969.jpg')
+    cy.get('.get-random').find('button').contains('Get Random Dog!')
   })
 
+  it('Should show an error message when random dog can/t be fetched', () => {
+    cy.intercept('GET', 'https://dog.ceo/api/breeds/image/random', {
+      statusCode: 404,  
+    })
+    cy.contains('There was a 404 error, please try again later.')
+  })
 
 })
