@@ -12,6 +12,7 @@ export const Home = () => {
     fetchData('breeds/image/random')
       .then(data => {
         setRandomDog(data.message);
+        console.log(data)
       })
       .catch(err => {
         setError(err.message);
