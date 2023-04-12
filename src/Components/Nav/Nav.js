@@ -16,7 +16,9 @@ export const Nav = () => {
         <NavLink to="/dogexhibits">
           <button className='nav-btn'>Choose Your Dog Breed</button>
         </NavLink>
-        <button className='nav-btn'>Favorite Dogs</button>
+        <NavLink to="/favorites" >
+          <button className='nav-btn'>Favorite Dogs</button>
+        </NavLink>
       </div>
     </header>
   )

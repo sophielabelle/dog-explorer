@@ -25,6 +25,7 @@ export const Home = () => {
       <h2>Welcome Dawgs</h2>
       <p>about us goes here</p>
       <button onClick={() => fetchRandomDog()} >Get Random Dog!</button>
+      {error && <p>There was a problem with your request, please try to refresh.</p>}
       <img className="random-dog" src={randomDog}/>
     </section>
   );
