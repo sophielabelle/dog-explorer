@@ -14,7 +14,7 @@ export const Home = () => {
         setRandomDog(data.message);
       })
       .catch(err => {
-        setError(err);
+        setError(err.message);
       });
   }
 
@@ -23,10 +23,14 @@ export const Home = () => {
   return(
     <section className="home-page">
       <h2>Welcome Dawgs</h2>
-      <p>about us goes here</p>
-      <button onClick={() => fetchRandomDog()} >Get Random Dog!</button>
-      {error && <p>There was a problem with your request, please try to refresh.</p>}
-      <img className="random-dog" src={randomDog}/>
+      <div className="home-contents-container">
+        <p>about us goes here</p>
+        <div className="get-random">
+          <button onClick={() => fetchRandomDog()} >Get Random Dog!</button>
+          {error && <p>There was a {error} error, please try again later.</p>}
+          <img className="random-dog" src={randomDog}/>
+        </div>  
+      </div>
     </section>
   );
 }

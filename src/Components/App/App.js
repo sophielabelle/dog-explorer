@@ -14,7 +14,7 @@ const App = () => {
   const [breedUrls, setBreedUrls] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
+  
 
   const fetchDogData = () => {
     fetchData(`breed/${breed}/images`)
@@ -23,7 +23,7 @@ const App = () => {
     })
     .catch(err => {
       console.log(err)
-      setError(err)
+      setError(err.message)
     });
   }
 
@@ -45,7 +45,7 @@ const App = () => {
           <Redirect from="*" to="/"/> 
         </Switch>
       </DogContext.Provider>
-      {error && <p>There was a problem with your request, please try to refresh.</p>}
+      {error && <p> Sorry there was a {error} error. Please try again later </p>}
     </>
   )
 }
