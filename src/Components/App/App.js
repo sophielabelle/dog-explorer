@@ -10,26 +10,28 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import './App.css';
 
 const App = () => {
-  const [breed, setBreed] = useState('')
-  const [breedUrls, setBreedUrls] = useState([])
-  const [favorites, setFavorites] = useState([])
-  const [error, setError] = useState('')
-  const [disabled, setDisabled] = useState(false)
+  const [breed, setBreed] = useState('');
+  const [breedUrls, setBreedUrls] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const fetchDogData = () => {
     fetchData(`breed/${breed}/images`)
     .then(data => {
-      setBreedUrls(data.message)
+      setBreedUrls(data.message);
     })
-    .catch(error => console.log(error))
-    
+    .catch(err => {
+      console.log(err)
+      setError(err)
+    });
   }
 
   useEffect(() => {
     if(breed !== ''){
       fetchDogData()
     }
-  }, [breed])
+  }, [breed]);
 
   return (
     <>
@@ -43,6 +45,7 @@ const App = () => {
           <Redirect from="*" to="/"/> 
         </Switch>
       </DogContext.Provider>
+      {error && <p>There was a problem with your request, please try to refresh.</p>}
     </>
   )
 }
