@@ -14,10 +14,10 @@ const App = () => {
   const [breedUrls, setBreedUrls] = useState([]);
   const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(true);
+  
 
   const fetchDogData = () => {
-    fetchData(`bree/${breed}/images`)
+    fetchData(`breed/${breed}/images`)
     .then(data => {
       setBreedUrls(data.message);
     })
