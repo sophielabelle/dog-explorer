@@ -15,8 +15,12 @@ describe('Exhibit Page', () => {
     cy.get('#Labrador > .breed-name')
     cy.get('#Bulldog > .breed-name')
     cy.get('#Greyhound > .breed-name')
-    cy.get('#Retriever > .breed-name').click();
-    cy.url().should('eq', 'http://localhost:3000/dogexhibits/Retriever')
+    cy.get('#Retriever > .breed-name')
+  })
+
+  it('Should take the user to breed page when one breed is selected', () => {
+    cy.get('#Labrador > .breed-name').click();
+    cy.url().should('eq', 'http://localhost:3000/dogexhibits/Labrador');
   })
 
 })

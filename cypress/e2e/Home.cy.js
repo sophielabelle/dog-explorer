@@ -36,7 +36,7 @@ describe('Home Page', () => {
     cy.get('.get-random').click();
     cy.get('.get-random').find('.random-dog').should('have.attr', 'src').should('eq', 'https://images.dog.ceo/breeds/germanshepherd/n02106662_12969.jpg')
     cy.get('.get-random').find('button').contains('Get Random Dog!')
-    cy.get('.get-random').click();
+   
   })
 
   it('Should show an error message when random dog can/t be fetched', () => {
