@@ -3,7 +3,6 @@ import { DogContext } from '../../DogContext/DogContext';
 import "./BreedCard.css";
 
 export const BreedCard = ({url}) => {
-  console.log(url)
   const { addFavs } = useContext(DogContext);
   const [favorites, setFavorites] = addFavs;
   const [disabled, setDisabled] = useState(false)
