@@ -15,7 +15,8 @@ describe('Exhibit Page', () => {
     cy.get('#Labrador > .breed-name')
     cy.get('#Bulldog > .breed-name')
     cy.get('#Greyhound > .breed-name')
-    cy.get('#Retriever > .breed-name')
+    cy.get('#Retriever > .breed-name').click();
+    cy.url().should('eq', 'http://localhost:3000/dogexhibits/Retriever')
   })
 
 })
