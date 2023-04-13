@@ -1,6 +1,10 @@
 [
-  {"url": "https://images.dog.ceo/breeds/schnauzer/n02097209_743.jpg"},
-  { "url": "https://images.dog.ceo/breeds/greyhound/Cordelia.jpg"},
-  { "url": "https://images.dog.ceo/breeds/labrador/IMG_4708.jpg" },
-  { "url": "https://images.dog.ceo/breeds/labrador/IMG_4708.jpg" }
+  {
+    "message": "https://images.dog.ceo/breeds/schnauzer-giant/n02097130_1032.jpg",
+    "status": "success"
+  },
+  {
+    "message": "https://images.dog.ceo/breeds/schnauzer-giant/n02097130_1070.jpg",
+    "status": "success"
+  }
 ]
