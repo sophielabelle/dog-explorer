@@ -18,13 +18,13 @@ const App = () => {
 
   const fetchDogData = () => {
     fetchData(`breed/${breed}/images`)
-    .then(data => {
-      setBreedUrls(data.message);
-    })
-    .catch(err => {
-      console.log(err)
-      setError(err.message)
-    });
+      .then(data => {
+        setBreedUrls(data.message);
+      })
+      .catch(err => {
+        console.log(err)
+        setError(err.message)
+      });
   }
 
   useEffect(() => {
