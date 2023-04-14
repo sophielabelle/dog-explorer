@@ -7,7 +7,7 @@ export const Nav = () => {
   return (
     <header className="nav-bar">
       <NavLink to="/" style={{ textDecoration: 'none', color: 'white' }}>
-        <h1> Night at the Dawg Museum</h1>
+        <h1 className='museum-title'> Night at the Dawg Museum</h1>
       </NavLink>
       <div className="nav-btns">
         <NavLink to="/">

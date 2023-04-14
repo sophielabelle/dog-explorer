@@ -18,4 +18,9 @@ describe('Exhibit Page', () => {
     cy.get('#Retriever > .breed-name')
   })
 
+  it('Should take the user to breed page when one breed is selected', () => {
+    cy.get('#Labrador > .breed-name').click();
+   
+  })
+
 })

@@ -4,8 +4,6 @@ import "./ExhibitCard.css";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 
-
-
 export const ExhibitCard = ({card}) => {
   const { chooseBreed } = useContext(DogContext);
   const setBreed = chooseBreed;
