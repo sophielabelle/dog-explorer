@@ -1,3 +1,20 @@
 .favorites {
-  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: inherit;
+  margin-top: 130px;
+  padding-top: 30px;
+  background-color: #e2e19e;
+}
+
+.fave-message {
+  height: inherit;
+  margin-top: 130px;
+  padding-top: 30px;
+  color: black;
+  font-family: 'Courgette', 'cursive';
+  text-align: center;
+  font-size: 3.0em;
 }

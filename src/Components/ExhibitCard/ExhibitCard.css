@@ -1,15 +1,22 @@
 .exhibit-card-container {
-  height: 430px;
+  height: 440px;
   box-shadow: 4px 4px 5px black;
   background-color: black;
   border: 2px solid black;
   border-radius: 5px;
   margin: 5px;
+  margin-top: 100px;
   color: White;
-  transition: 0.4s;
+  border: 2.8mm ridge #f96162;
+  transition: 0.5s;
+}
+
+.exhibit-card-container:hover {
+  scale: 1.1;
 }
 
 .breed-name {
+  font-size: larger;
   font-weight: bold;
   text-align: center;
   margin: 5px;
@@ -22,16 +29,16 @@
   overflow: hidden;
   height: 400px;
   width: 200px;
-  cursor: pointer;
-}
-
-.exhibit-card-container:hover {
-  height: 450px;
-  margin: 0px;
 }
 
 .exhibit-card > img {
   flex-shrink: 0;
   max-height: 100%;
   min-width: 100%;
+}
+
+a:-webkit-any-link {
+  cursor: pointer;
+  height: fit-content;
+  text-decoration: none;
 }

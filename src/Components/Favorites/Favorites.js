@@ -8,9 +8,10 @@ export const Favorites = () => {
   const [favorites, setFavorites] = addFavs;
 
   const allFavorites = favorites.map(favorite => <FavoriteCard url={favorite}/>)
+  const displayFavesLogic = !allFavorites.length ? <p className="fave-message">You haven't favorited any dogs yet...</p> : allFavorites
   return(
     <section className="favorites">
-      {allFavorites}
+      {displayFavesLogic}
     </section>
   )
 }
