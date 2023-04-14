@@ -7,19 +7,23 @@
 }
 
 .dog-card {
-  max-height: 150px;
-  border: 4mm ridge #d0931a;
+  height: 200px;
+  border: 3mm ridge #dbaa4b;
 }
 
 .favorite-button {
-  width: fit-content;
+  width: 60px;
+  height: 30px;
   border: 0;
   border-radius: 7px;
   margin: 6px;
-  cursor: pointer;
-  transition: 0.5s;
   background: #3b92d0;
   color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
 }
 
 .favorite-button:hover {
