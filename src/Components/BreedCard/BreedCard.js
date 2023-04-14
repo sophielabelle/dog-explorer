@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { DogContext } from '../../DogContext/DogContext';
 import "./BreedCard.css";
+import { Modal } from "./ImageModal/ImageModal";
 
 export const BreedCard = ({url}) => {
   const { addFavs } = useContext(DogContext);
@@ -11,9 +12,16 @@ export const BreedCard = ({url}) => {
     setFavorites([...favorites, newFav]);
   }
 
+  const showModal = () => {
+    return (
+    <Modal url={url}/>
+    )
+  }
+
+
   return (
     <div className="card">
-      <img className="dog-card" src={url} alt=""/>
+      <img onClick={() => showModal()}className="dog-card" src={url} alt=""/>
       <button onClick={() => {
         favoriteDog(url) 
         setDisabled(true)
