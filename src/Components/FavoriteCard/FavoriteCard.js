@@ -12,8 +12,8 @@ export const FavoriteCard = ({url}) => {
   }
 
   return (
-    <div className="card">
-      <img className="dog-card" src={url} alt=""/>
+    <div className="fave-card">
+      <img className="fave-dog" src={url} alt=""/>
       <button onClick={() => deleteFavorite(url)} className="delete-button">Delete</button>
     </div>
   );

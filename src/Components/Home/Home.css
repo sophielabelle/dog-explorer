@@ -1,45 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 18%;
-  background-color: pink;
-  height: 88vh;
+  height: 100%;
+  margin-top: 130px;
+  background-color: #f2c0c9;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
-.home-page > h2,
-.home-page > p,
-.home-page > button {
-  width: fit-content;
-}
-
-.random-dog{
-  /* width: 50vw; */
-  max-height: 45vh;
-  border: 4mm ridge #f96162;
-}
-
-.get-random > button {
-  height: 40px;
-  width: 150px;
-  border: 0;
-  border-radius: 7px;
-  margin: 6px;
-  cursor: pointer;
-  transition: 0.5s;
-  background-color: #f96162
-}
-
-.get-random > button:hover {
-scale:1.1;
-background: #3b92d0
-}
-
-.get-random {
- display:flex;
- flex-direction: column;
- align-items: center;
+.welcome {
+  font-family: 'Courgette', 'cursive';
+  position: absolute;
+  text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+  font-size: 2.5em;
+  color: white;
 }
 
 .home-contents-container {
@@ -48,4 +26,67 @@ background: #3b92d0
   justify-content: space-around;
   width: 100vw;
   margin-top: 80px;
+}
+
+.about-us {
+  width: 45vw;
+  height: 20vw;
+  border: 4mm ridge #099c93;
+  background-color: #86B6B3;
+  color: white;
+  margin-top: 100px;
+  padding: 10px;
+}
+
+.about-us > p { 
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
+  font-size: 1.7em;
+}
+
+.get-random {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+.get-random > button {
+  height: 50px;
+  width: 155px;
+  border: 0;
+  border-radius: 7px;
+  margin: 10px;
+  background: #3b92d0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.571);
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+.get-random > button:hover {
+  scale: 1.05;
+  background: #f96162;
+}
+
+.get-random > button:active {
+  scale: 1.0;
+  background: #9f4040;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  border: 4mm ridge #099c93;
+  background-color: #86B6B3;
+}
+
+.random-dog-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: fill;
 }

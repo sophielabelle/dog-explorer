@@ -11,11 +11,10 @@ export const BreedPage = () => {
 
   return (
     <>
-      {!breedCards.length && <p className="loading">loading...</p>}
-      { breedCards.length &&
+      {!breedCards.length && <p className="loading">Loading...</p>}
       <div className="breed-page">
-      {breedCards}
-      </div> }
+        {breedCards}
+      </div>
     </>
   )
 }
