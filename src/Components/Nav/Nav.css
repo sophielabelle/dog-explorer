@@ -1,7 +1,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Birthstone+Bounce&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 
 .nav-bar {
@@ -40,7 +40,7 @@
 }
 
 .museum-title {
-  font-family: 'Birthstone Bounce', 'cursive';
+  font-family: 'Courgette', 'cursive';
   position: absolute;
   font-size: 4vw;
   -webkit-text-stroke-width: 0.03em;

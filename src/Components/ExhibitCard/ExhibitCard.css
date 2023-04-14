@@ -23,6 +23,7 @@
   height: 400px;
   width: 200px;
   cursor: pointer;
+  border: 4mm ridge #f96162;
 }
 
 .exhibit-card-container:hover {
