@@ -1,19 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
+import { DogContext } from '../../DogContext/DogContext';
 import { fetchData } from "../../data/apiCall";
 import './Home.css'
 
 export const Home = () => {
+  const { showError } = useContext(DogContext);
   const [randomDog, setRandomDog] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = showError
 
   const fetchRandomDog = () => {
     fetchData('breeds/image/random')
       .then(data => {
         setRandomDog(data.message);
-        console.log(data)
       })
       .catch(err => {
-        setError(err.message);
+        setError(`Sorry there was a ${err.message} error please try again`);
       });
   }
 
@@ -28,9 +29,9 @@ export const Home = () => {
         </div>
         <div className="get-random">
           <button onClick={() => fetchRandomDog()} >Get Random Dog!</button>
-          {error && <p>There was a {error} error, please try again later.</p>}
           <div className="img-container">
             <img className="random-dog-img" src={randomDog}/>
+            <p className="error-message">{error}</p>
           </div>
         </div>  
       </div>

@@ -20,11 +20,11 @@ describe('Home Page', () => {
 
   it('Should welcome the user', () => {
     cy.get('h2').contains('Welcome Dawgs')
-    cy.get('p').contains('about us goes here')
+    cy.get('.about-us').contains('Hello! Stay on this page to find adorable random dogs. Or visit our exhibits for a specific dog breed where you can save your favorites for later.')
   })
 
   it('Should display a picture of a random dog', () => {
-    cy.get('.get-random').find('.random-dog').should('have.attr', 'src').should('eq', 'https://images.dog.ceo/breeds/pointer-german/n02100236_3836.jpg')
+    cy.get('.img-container').find('.random-dog-img').should('have.attr', 'src').should('eq', 'https://images.dog.ceo/breeds/pointer-german/n02100236_3836.jpg')
     cy.get('.get-random').find('button').contains('Get Random Dog!')
   })
 
@@ -34,7 +34,7 @@ describe('Home Page', () => {
       fixture: "getRandomDog.json"
     })
     cy.get('.get-random').click();
-    cy.get('.get-random').find('.random-dog').should('have.attr', 'src').should('eq', 'https://images.dog.ceo/breeds/germanshepherd/n02106662_12969.jpg')
+    cy.get('.img-container').find('.random-dog-img').should('have.attr', 'src').should('eq', 'https://images.dog.ceo/breeds/germanshepherd/n02106662_12969.jpg')
     cy.get('.get-random').find('button').contains('Get Random Dog!')
    
   })

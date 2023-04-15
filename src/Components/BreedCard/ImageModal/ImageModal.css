@@ -24,8 +24,10 @@
 .dog-card-small {
   height: 200px;
   border: 3mm ridge #dbaa4b;
+  cursor: pointer;
 }
 
 .dog-card-large {
-  height: 500px;
+  height: 80%;
+  cursor: pointer;
 }

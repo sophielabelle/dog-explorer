@@ -22,8 +22,7 @@ const App = () => {
         setBreedUrls(data.message);
       })
       .catch(err => {
-        console.log(err)
-        setError(err.message)
+        setError(`Sorry there was a ${err.message} error please try again`);
       });
   }
 
@@ -35,7 +34,7 @@ const App = () => {
 
   return (
     <>
-      <DogContext.Provider value={{urls: breedUrls, addFavs: [favorites, setFavorites], chooseBreed: setBreed}}>
+      <DogContext.Provider value={{urls: breedUrls, addFavs: [favorites, setFavorites], chooseBreed: setBreed, showError: [error, setError]}}>
         <Nav />
         <Switch>
           <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />
@@ -45,7 +44,6 @@ const App = () => {
           <Redirect from="*" to="/"/> 
         </Switch>
       </DogContext.Provider>
-      {error && <p> Sorry there was a {error} error. Please try again later </p>}
     </>
   )
 }
