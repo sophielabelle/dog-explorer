@@ -15,7 +15,7 @@
 
 .dialog {
   position: fixed;
-  top: 200px;
+  top: 150px;
   box-shadow: 0 8px 6px -6px black;
   border: 3mm ridge #dbaa4b;
   background-color: #86B6B3;
@@ -29,15 +29,3 @@
 .dog-card-large {
   height: 500px;
 }
-/* .modal-body {
-  padding: 5px;
-  border: 2px solid black;
-  width: 80%;
-  height: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.modal-image {
-  height: 200px;
-  width: 200px;
-} */
