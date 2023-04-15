@@ -9,12 +9,12 @@ export const BreedPage = () => {
   const breedUrls = urls;
   const error = showError
   const breedCards = breedUrls.map(url => <BreedCard url={url} />)
-  const displayMessage = !error && !breedCards.length ? <p className="loading">Loading...</p> : error ? <p className="error-message">{error}</p> : breedCards
 
   return (
     <>
       <div className="breed-page">
-        {displayMessage}
+        {breedCards}
+        <p className="error-message">{error}</p> 
       </div>
     </>
   )

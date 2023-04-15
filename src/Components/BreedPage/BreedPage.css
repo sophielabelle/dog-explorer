@@ -3,18 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  height: inherit;
   margin-top: 130px;
   padding-top: 30px;
   background-color: #86B6B3;
 }
 
-.loading {
-  height: inherit;
-  margin-top: 130px;
-  padding-top: 30px;
-  background-color: #86B6B3;
-  color: black;
-  font-family: 'Courgette', 'cursive';
-  text-align: center;
-  font-size: 3.0em;
-}
+

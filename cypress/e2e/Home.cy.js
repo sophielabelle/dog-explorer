@@ -43,7 +43,7 @@ describe('Home Page', () => {
     cy.intercept('GET', 'https://dog.ceo/api/breeds/image/random', {
       statusCode: 404,  
     })
-    cy.contains('There was a 404 error, please try again later.')
+    cy.get('.img-container').contains("Sorry there was a 404 error please try again")
   })
 
 })

@@ -24,3 +24,14 @@ describe('Single Breed Page', () => {
     cy.get('.dog-card-large').should('have.length', 1).click().should('have.length', 0)
   })
 })
+
+describe('Error page', () => {
+  it('Should show an error message when a dog breed can/t be fetched', () => {
+    cy.intercept('GET', 'https://dog.ceo/api/breed/labrador/images', {
+      statusCode: 404,  
+    })
+    cy.visit('http://localhost:3000/dogexhibits')
+    cy.get('#labrador > img').click()
+    cy.get('.error-message').contains('Sorry there was a 404 error please try again')
+  })
+})
