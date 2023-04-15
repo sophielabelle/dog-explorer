@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { DogContext } from '../../DogContext/DogContext';
+import { DogContext } from "../../DogContext/DogContext";
 import "./FavoriteCard.css";
 
 export const FavoriteCard = ({url}) => {
@@ -7,7 +7,7 @@ export const FavoriteCard = ({url}) => {
   const [favorites, setFavorites] = addFavs;
 
   const deleteFavorite = (url) => {
-    const filterFav = favorites.filter(favorite => favorite !== url)
+    const filterFav = favorites.filter(favorite => favorite !== url);
     setFavorites(filterFav);
   }
 

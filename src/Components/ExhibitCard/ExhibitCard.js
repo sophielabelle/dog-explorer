@@ -7,13 +7,13 @@ import { useContext } from "react";
 export const ExhibitCard = ({card}) => {
   const { chooseBreed } = useContext(DogContext);
   const setBreed = chooseBreed;
+  const altText = card.toLowerCase();
 
   const selectBreed = (event) => {
     const selected = event.target.parentElement.id;
     setBreed(selected);
   }
 
-  const altText = card.toLowerCase()
   return (
     <NavLink to={`/dogexhibits/${card}`}>
       <div id={card} className="exhibit-card-container" onClick={(event) => selectBreed(event)} >
@@ -23,5 +23,5 @@ export const ExhibitCard = ({card}) => {
         <p className="breed-name">{card}</p>
       </div>
     </NavLink>
-  )
+  );
 }

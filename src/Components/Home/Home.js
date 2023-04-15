@@ -1,12 +1,12 @@
 import React, {useContext, useEffect, useState} from "react";
-import { DogContext } from '../../DogContext/DogContext';
+import { DogContext } from "../../DogContext/DogContext";
 import { fetchData } from "../../data/apiCall";
-import './Home.css'
+import "./Home.css"
 
 export const Home = () => {
   const { showError } = useContext(DogContext);
   const [randomDog, setRandomDog] = useState('');
-  const [error, setError] = showError
+  const [error, setError] = showError;
 
   const fetchRandomDog = () => {
     fetchData('breeds/image/random')
