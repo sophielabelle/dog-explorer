@@ -18,13 +18,13 @@ Night at the Dawg Museum is an app for users who want to browse through pictures
 ### Installation Instructions:
 
 1. Clone down a local copy of [the repository](hhttps://github.com/sophielabelle/museum-explorer).
-1. `cd` into the repository and run `npm install`.
-1. You can open the project in your preferred text editor.
-1. To host the page on your local server run `npm start`.
+2. `cd` into the repository and run `npm install`.
+3. You can open the project in your preferred text editor.
+4. To host the page on your local server run `npm start`.
+5. Or visit https://museum-explorer-git-main-sophielabelle.vercel.app/
 ***
-
 ### Preview of App:
-![](demo.gif)
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjNlMjA2NGNlZDI3NzVkMjljZjZjYzg2MWZmNjkwMmJjNWYwNzZmZSZjdD1n/1ny8UeiV3AO8X9gz8m/giphy.gif)
 ***
 
 ### Context:
