@@ -1,4 +1,4 @@
-# Rancid Tomatillos
+# Night at the Dawg Museum
 
 ## Abstract
 Night at the Dawg Museum is an app for users who want to browse through pictures of dogs. The app allows a user to look through pictures of dogs on the main page. When the user want to narrow their search, they can go to the exhibit page where they can choose between five different breeds of dogs. Once they select one breed, they will be taken to a page where the they can browse many pictures of that one type of breed. The user can save the picture that they like and look at it later in the saved dog page. The user also has the option to delete pictures from they pictures that they've saved
@@ -28,11 +28,11 @@ Night at the Dawg Museum is an app for users who want to browse through pictures
 ***
 
 ### Context:
-Project Spec- (https://frontend.turing.edu/projects/module-3/stretch.html)
+[Project Spec](https://frontend.turing.edu/projects/module-3/stretch.html)
 
 Completed as part of the Turing School of Software Development 2211 FE Mod 3 curriculum
 
-Approximate hours to completion: 25
+Approximate hours to completion: 35
 ***
 
 ### Contributors:
@@ -45,20 +45,19 @@ Approximate hours to completion: 25
 
 - Demonstrate competency with React fundamentals 
 - Further learning how to test React components 
-- Demonstrate use of Context API as our strech tech
-- Create an app that allows a user to easily flow through every feature.
+- Learn and demonstrate correct use of Context API as our stretch tech
+- Create an app that allows a user to easily flow through every feature
 ***
 
 ### Wins + Challenges:
 
 **Win:**
 
- We were able to narrow down our use of prop drilling by using Context API.
-
-**Win:**
-  We were able to work as a team and mad equal controbutions as a team.
+- We were able to pass necessary information between components with our use Context API and limit prop to where they were applicable.
+- We worked as a team to make equal contributions, and worked through roadblocks in an effective way.
 
 **Challenge:**
 
 - End to end cypress testing
-- Implementing our custom modal for images
+- Implementing a custom modal for images
+- Understanding when/ where to implament Context Api in the project process
