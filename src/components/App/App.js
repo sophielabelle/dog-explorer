@@ -28,7 +28,7 @@ const App = () => {
   useEffect(() => {
     if(breed !== ''){
       fetchDogData()
-    }
+    }  
   }, [breed]);
 
   return (
@@ -38,7 +38,7 @@ const App = () => {
         <Switch>
           <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />
           <Route path="/dogexhibits" render={() => <ExhibitContainer /> } />
-          <Route path="/favorites" render={() => <Favorites favorites={favorites}/>} />
+          <Route path="/favorites" render={() => <Favorites favorites={favorites} />} />
           <Route exact path="/" render={() => <Home />} />
           <Redirect from="*" to="/"/> 
         </Switch>

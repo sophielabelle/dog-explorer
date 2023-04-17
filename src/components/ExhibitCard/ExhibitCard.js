@@ -18,7 +18,7 @@ export const ExhibitCard = ({card}) => {
     <NavLink to={`/dogexhibits/${card}`}>
       <div id={card} className="exhibit-card-container" onClick={(event) => selectBreed(event)} >
         <div id={altText} className="exhibit-card">
-          <img src={require(`../../assets/${card}.jpeg`)} alt={altText}/>
+          <img src={require(`../../assets/${card}.jpeg`)} alt={altText} />
         </div>
         <p className="breed-name">{card}</p>
       </div>

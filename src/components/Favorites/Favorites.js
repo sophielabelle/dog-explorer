@@ -6,7 +6,7 @@ import "./Favorites.css"
 export const Favorites = () => {
   const { addFavs } = useContext(DogContext);
   const [favorites] = addFavs;
-  const allFavorites = favorites.map(favorite => <FavoriteCard url={favorite}/>);
+  const allFavorites = favorites.map(favorite => <FavoriteCard url={favorite} key={favorite}/>);
   const displayFavesLogic = !allFavorites.length ? <p className="fave-message">You haven't favorited any dogs yet...</p> : allFavorites
   
   return(
