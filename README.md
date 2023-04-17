@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
+Night at the Dawg Museum is an app for users who want to browse through pictures of dogs. The app allows a user to look through pictures of dogs on the main page. When the user want to narrow their search, they can go to the exhibit page where they can choose between five different breeds of dogs. Once they select one breed, they will be taken to a page where the they can browse many pictures of that one type of breed. The user can save the picture that they like and look at it later in the saved dog page. The user also has the option to delete pictures from they pictures that they've saved
 
-## Available Scripts
+***
 
-In the project directory, you can run:
+### Technologies Used:
+- JavaScript
+- HTML
+- CSS
+- React/Context-API
+- Router
+- Cypress
 
-### `npm start`
+***
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation Instructions:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone down a local copy of [the repository](hhttps://github.com/sophielabelle/museum-explorer).
+1. `cd` into the repository and run `npm install`.
+1. You can open the project in your preferred text editor.
+1. To host the page on your local server run `npm start`.
+***
 
-### `npm test`
+### Preview of App:
+![](demo.gif)
+***
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Context:
+Project Spec- (https://frontend.turing.edu/projects/module-3/stretch.html)
 
-### `npm run build`
+Completed as part of the Turing School of Software Development 2211 FE Mod 3 curriculum
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Approximate hours to completion: 25
+***
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Contributors:
+- [Lexye Jordan](https://github.com/Lexyful)
+- [Sophie LaBelle](https://github.com/sophielabelle)
+- [Travis Parks](https://github.com/LeftyLincoln/)
+***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Learning Goals:
 
-### `npm run eject`
+- Demonstrate competency with React fundamentals 
+- Further learning how to test React components 
+- Demonstrate use of Context API as our strech tech
+- Create an app that allows a user to easily flow through every feature.
+***
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Wins + Challenges:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Win:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ We were able to narrow down our use of prop drilling by using Context API.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Win:**
+  We were able to work as a team and mad equal controbutions as a team.
 
-## Learn More
+**Challenge:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- End to end cypress testing
+- Implementing our custom modal for images
