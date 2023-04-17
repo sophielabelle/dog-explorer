@@ -4,7 +4,7 @@ describe('Exhibit Page', () => {
       statusCode: 200,  
     
     })
-    cy.visit('http://localhost:3000/dogexhibits')
+    cy.visit('https://museum-explorer.vercel.app/dogexhibits')
   })
 
   it('Should have five breeds/exhibits', () => {
