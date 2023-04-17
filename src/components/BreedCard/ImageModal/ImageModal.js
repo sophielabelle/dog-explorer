@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import "./ImageModal.css";
 
 export const Modal = ({ url }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   
   const handleShowDialog = () => {
-    setIsOpen(!isOpen)
-    console.log('click')
+    setIsOpen(!isOpen);
   }
 
   return (
@@ -31,9 +30,5 @@ export const Modal = ({ url }) => {
         </div>
       )}
     </div>
-
-    // <div class="modal-body">
-    //   <img className="modal-image "src={url} alt="dog"/>
-    // </div>
   );
-};
+}

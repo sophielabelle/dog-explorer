@@ -24,9 +24,16 @@
 .dog-card-small {
   height: 200px;
   border: 3mm ridge #dbaa4b;
+  cursor: pointer;
 }
 
 .dog-card-large {
+<<<<<<< HEAD:src/Components/BreedCard/ImageModal/ImageModal.css
   height: 500px;
 }
 
+=======
+  height: 80%;
+  cursor: pointer;
+}
+>>>>>>> 57ab840dc369c9b9e5288841fab18dfa28b78b1c:src/components/BreedCard/ImageModal/ImageModal.css
