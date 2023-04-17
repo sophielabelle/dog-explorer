@@ -1,0 +1,33 @@
+.overlay {
+  position: fixed;
+  display: block; 
+  overflow: auto; 
+  width: 100%; 
+  height: 100%; 
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 999; 
+  cursor: pointer;
+}
+
+.dialog {
+  position: fixed;
+  top: 150px;
+  box-shadow: 0 8px 6px -6px black;
+  border: 3mm ridge #dbaa4b;
+  background-color: #86B6B3;
+}
+
+.dog-card-small {
+  height: 200px;
+  border: 3mm ridge #dbaa4b;
+  cursor: pointer;
+}
+
+.dog-card-large {
+  height: 80%;
+  cursor: pointer;
+}

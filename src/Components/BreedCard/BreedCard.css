@@ -1,14 +1,8 @@
-
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 5px;
-}
-
-.dog-card {
-  height: 200px;
-  border: 3mm ridge #dbaa4b;
 }
 
 .favorite-button {
@@ -29,4 +23,10 @@
 .favorite-button:hover {
   scale:1.1;
   background-color: #f96162;
+}
+
+.favorite-button:disabled {
+  background-color: grey;
+  color: darkgray;
+  pointer-events: none;
 }

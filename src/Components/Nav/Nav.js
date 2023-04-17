@@ -1,7 +1,6 @@
-import React from 'react'
-// import { FaDog } from 'react-icons/fa';
-import './Nav.css'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./Nav.css";
 
 export const Nav = () => {
   return (
@@ -21,5 +20,5 @@ export const Nav = () => {
         </NavLink>
       </div>
     </header>
-  )
+  );
 }

@@ -6,5 +6,5 @@ export const fetchData = endpoint => {
       } else {
         throw new Error(res.status);
       }
-    })
+    });
 }

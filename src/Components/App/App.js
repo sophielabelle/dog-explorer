@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from 'react';
-import { DogContext } from '../../DogContext/DogContext';
-import { fetchData } from '../../data/apiCall';
-import { Home } from '../Home/Home';
-import { Nav } from '../Nav/Nav';
-import { ExhibitContainer } from '../ExhibitContainer/ExhibitContainer';
-import { BreedPage } from '../BreedPage/BreedPage';
-import { Favorites } from '../Favorites/Favorites';
+import React, {useEffect, useState} from "react";
+import { DogContext } from "../../DogContext/DogContext";
+import { fetchData } from "../../data/apiCall";
+import { Home } from "../Home/Home";
+import { Nav } from "../Nav/Nav";
+import { ExhibitContainer } from "../ExhibitContainer/ExhibitContainer";
+import { BreedPage } from "../BreedPage/BreedPage";
+import { Favorites } from "../Favorites/Favorites";
 import { Redirect, Route, Switch } from "react-router-dom";
-import './App.css';
+import "./App.css";
 
 const App = () => {
   const [breed, setBreed] = useState('');
@@ -15,15 +15,13 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
   const [error, setError] = useState('');
   
-
   const fetchDogData = () => {
     fetchData(`breed/${breed}/images`)
       .then(data => {
         setBreedUrls(data.message);
       })
       .catch(err => {
-        console.log(err)
-        setError(err.message)
+        setError(`Sorry there was a ${err.message} error please try again`);
       });
   }
 
@@ -35,7 +33,7 @@ const App = () => {
 
   return (
     <>
-      <DogContext.Provider value={{urls: breedUrls, addFavs: [favorites, setFavorites], chooseBreed: setBreed}}>
+      <DogContext.Provider value={{urls: breedUrls, addFavs: [favorites, setFavorites], chooseBreed: setBreed, showError: [error, setError]}}>
         <Nav />
         <Switch>
           <Route path="/dogexhibits/:breed" render={({match} ) => <BreedPage breed={match.params.breed} /> } />
@@ -45,9 +43,8 @@ const App = () => {
           <Redirect from="*" to="/"/> 
         </Switch>
       </DogContext.Provider>
-      {error && <p> Sorry there was a {error} error. Please try again later </p>}
     </>
-  )
+  );
 }
 
 export default App;
