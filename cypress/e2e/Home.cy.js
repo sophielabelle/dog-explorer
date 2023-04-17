@@ -4,7 +4,7 @@ describe('Home Page', () => {
       statusCode: 200,  
       fixture: "randomDog.json"
     })
-    cy.visit('http://localhost:3000')
+    cy.visit('https://museum-explorer.vercel.app/')
   })
   
   it('Home page should have a title', () => {

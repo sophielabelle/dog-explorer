@@ -4,7 +4,7 @@ describe('Single Breed Page', () => {
       statusCode: 200,
       fixture: "singleExhibitBreeds.json"
     })
-    cy.visit('http://localhost:3000/dogexhibits')
+    cy.visit('https://museum-explorer.vercel.app/dogexhibits')
     cy.get('#labrador > img').click()
   })
 
@@ -30,7 +30,7 @@ describe('Error page', () => {
     cy.intercept('GET', 'https://dog.ceo/api/breed/labrador/images', {
       statusCode: 404,  
     })
-    cy.visit('http://localhost:3000/dogexhibits')
+    cy.visit('https://museum-explorer.vercel.app/dogexhibits')
     cy.get('#labrador > img').click()
     cy.get('.error-message').contains('Sorry there was a 404 error please try again')
   })

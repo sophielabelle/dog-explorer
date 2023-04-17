@@ -27,6 +27,11 @@
   cursor: pointer;
 }
 
+.dog-card-small:hover {
+  scale: 1.05;
+  border: 3mm ridge #3b92d0;
+}
+
 .dog-card-large {
   height: 80%;
   cursor: pointer;
