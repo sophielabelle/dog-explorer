@@ -9,7 +9,8 @@ Night at the Dawg Museum is an app for users who want to browse through pictures
 - JavaScript
 - HTML
 - CSS
-- React/Context-API
+- React
+- Context-API
 - Router
 - Cypress
 
