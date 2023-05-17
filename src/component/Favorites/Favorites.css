@@ -4,14 +4,13 @@
   flex-wrap: wrap;
   justify-content: center;
   height: fit-content;
-  min-height: inherit;
+  min-height: 100vh;
   margin-top: 130px;
   padding-top: 30px;
   background-color: #e2e19e;
 }
 
 .fave-message {
-  height: inherit;
   margin-top: 130px;
   padding-top: 30px;
   color: black;
